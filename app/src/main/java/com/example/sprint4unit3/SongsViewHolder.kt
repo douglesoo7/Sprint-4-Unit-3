@@ -8,7 +8,7 @@ import java.text.FieldPosition
 
 class SongsViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     fun setData(resultsDTO: ResultsDTO){
-        Glide.with(view.songPreviewImage).load(resultsDTO.previewUrl).into(view.songPreviewImage)
+        Glide.with(view.songPreviewImage).load(resultsDTO.artworkUrl100).into(view.songPreviewImage)
         view.tvTrackName.text=resultsDTO.trackName;
         view.tvArtistName.text=resultsDTO.artistName
     }

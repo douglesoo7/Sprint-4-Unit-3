@@ -26,18 +26,17 @@ class MainActivity : AppCompatActivity() {
         val apiClient = Network.getRetrofit().create(ApiClient::class.java)
 
         apiClient.getSongs(searchKeywords.text.toString())
-            .enqueue(object : Callback<List<ResultsDTO>>{
-                override fun onResponse(
-                    call: Call<List<ResultsDTO>>,
-                    response: Response<List<ResultsDTO>>
-                ) {
-                    resultsDTOList=response.body()!!
+            .enqueue(object : Callback<ResponseDTO>{
+                override fun onResponse(call: Call<ResponseDTO>, response: Response<ResponseDTO>) {
+                    resultsDTOList=response.body()?.results as List<ResultsDTO>
                     setRecyclerView()
                 }
 
-                override fun onFailure(call: Call<List<ResultsDTO>>, t: Throwable) {
-                    TODO("Not yet implemented")
+                override fun onFailure(call: Call<ResponseDTO>, t: Throwable) {
+                   t.printStackTrace()
                 }
+
+
             })
     }
 

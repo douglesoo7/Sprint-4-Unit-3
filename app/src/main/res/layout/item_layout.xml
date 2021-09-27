@@ -6,21 +6,24 @@
 
     <ImageView
         android:id="@+id/songPreviewImage"
-        android:layout_gravity="center_horizontal"
         android:layout_width="200dp"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/tvTrackName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"/>
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="22sp" />
 
     <TextView
+        android:id="@+id/tvArtistName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvArtistName"
-        android:textSize="15sp"/>
+        android:layout_gravity="center_horizontal"
+        android:textSize="22sp" />
 
 
 </LinearLayout>

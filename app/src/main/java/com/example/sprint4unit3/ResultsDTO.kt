@@ -96,4 +96,7 @@ data class ResultsDTO(
 
 	@field:SerializedName("isStreamable")
 	val isStreamable: Boolean? = null
+
+
+
 )

@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiClient {
-    @GET("/search?term")
-    fun getSongs(@Query("term") term:String): Call<ResponseDTO>
+    @GET("search")
+    fun getSongs(@Query("term") term:String): Call<List<ResultsDTO>>
 }
